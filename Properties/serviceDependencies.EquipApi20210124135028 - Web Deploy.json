@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/EquipApiapi/apis/EquipApi",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/equipapidbserver/databases/EquipApi_db",
+      "type": "mssql.azure",
+      "connectionId": "equipdbconnstring",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
