@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EquipApi.Data;
 
 namespace EquipApi
 {
@@ -28,7 +29,7 @@ namespace EquipApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EquipContext>(options =>
+            services.AddDbContext<EquipApiContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
@@ -36,6 +37,9 @@ namespace EquipApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EquipApi", Version = "v1" });
             });
+
+            services.AddDbContext<EquipApiContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("EquipApiContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
