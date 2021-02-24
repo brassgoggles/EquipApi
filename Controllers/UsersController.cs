@@ -29,7 +29,7 @@ namespace EquipApi.Controllers
         }
 
         // GET: api/Users/5
-        [HttpGet("{id}")]
+        [HttpGet("id={id}")]
         public async Task<ActionResult<User>> GetUser(string id)
         {
             var user = await _context.User.FindAsync(id);
@@ -40,6 +40,13 @@ namespace EquipApi.Controllers
             }
 
             return user;
+        }
+
+        // GET: api/Users/5
+        [HttpGet("userlevel={userlevel}")]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsersByUserLevel(string UserLevel)
+        {
+            return await _context.User.Where(u => u.UserLevel == UserLevel).ToListAsync();
         }
 
         // PUT: api/Users/5

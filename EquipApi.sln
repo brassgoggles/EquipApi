@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EquipApi", "EquipApi.csproj", "{7034DE7E-74B7-4A4B-A3EC-85BDAB8E919D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equip", "..\Equip\Equip.csproj", "{4F35A7FA-DF11-4708-A422-67D75BD7E11E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Equip", "..\Equip\Equip.csproj", "{4F35A7FA-DF11-4708-A422-67D75BD7E11E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
